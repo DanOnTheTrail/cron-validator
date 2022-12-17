@@ -11,5 +11,12 @@
   "bugs": {
     "url": "https://github.com/DanOnTheTrail/cron-validator/issues"
   },
-  "homepage": "https://github.com/DanOnTheTrail/cron-validator#readme"
+  "homepage": "https://github.com/DanOnTheTrail/cron-validator#readme",
+  "devDependencies": {
+    "jest": "^29.3.1",
+    "jest-environment-jsdom": "^29.3.1"
+  },
+  "scripts": {
+    "test": "jest"
+  }
 }
