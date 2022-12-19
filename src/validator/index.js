@@ -1,1 +1,1 @@
-console.log('hello from validator');
+// TODO: Create validator logic
