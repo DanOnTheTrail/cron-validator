@@ -1,1 +1,1 @@
-// TODO: Create validator logic
+// Create validator logic

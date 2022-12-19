@@ -1,1 +1,1 @@
-// TODO: Hook up validator to UI
+// Hook up validator to UI
