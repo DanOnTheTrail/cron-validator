@@ -1,10 +1,11 @@
 'use strict'
 
-var express = require('express');
-var logger = require('morgan');
-var open = require('open')
-var app = express();
+const express = require('express');
+const logger = require('morgan');
+const open = require('open')
+const app = express();
 
+app.disable("x-powered-by");
 app.use(logger('dev'));
 app.use(express.static('./dist'));
 
@@ -19,14 +20,14 @@ app.get('/404', function(req, res, next){
     // responding here
     next();
   });
-  
+
   app.get('/403', function(req, res, next){
     // trigger a 403 error
     var err = new Error('Access not allowed');
     err.status = 403;
     next(err);
   });
-  
+
   app.get('/500', function(req, res, next){
     // trigger a generic (500) error
     next(new Error('Server error'));

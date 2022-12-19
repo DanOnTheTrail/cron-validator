@@ -1,1 +1,1 @@
-console.log('hello from app');
+// Hook up validator to UI
