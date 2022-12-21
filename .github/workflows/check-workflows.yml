@@ -6,10 +6,11 @@ on:
 
 jobs:
   actionlint:
+    name: Lint GitHub Actions
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3.2.0
 
       - name: Lint workflow files
         uses: docker://rhysd/actionlint:1.6.22
@@ -17,11 +18,11 @@ jobs:
           args: -color
 
   checkVersions:
-    name: Check Versions
+    name: Check for pinned verions
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3.2.0
 
       - name: Ensure SHA pinned actions
         uses: zgosalvez/github-actions-ensure-sha-pinned-actions@af2eb3226618e2494e3d9084f515ad6dcf16e229
