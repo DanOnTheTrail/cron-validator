@@ -9,13 +9,16 @@
 </head>
 
 <body>
-  <form>
-    <label for="cron">Cron Expression</label>
-    <input type="text" id="cron" />
-    <button id="validate">Validate</button>
-  </form>
+  <label for="cron">Cron Expression</label>
+  <input type="text" id="cron" />
+  <button id="validate">Validate</button>
+
+  <div id="message-box"></div>
   <script src="validator.js"></script>
   <script src="app.js"></script>
+  <script>
+    init(validate)
+  </script>
 </body>
 
 </html>
