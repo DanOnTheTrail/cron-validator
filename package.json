@@ -28,6 +28,7 @@
   },
   "scripts": {
     "test": "jest --watch",
+    "test:ci": "jest --coverage",
     "build": "./scripts/build.sh",
     "start": "npm run build && node ./scripts/server.js",
     "lint": "npx eslint './src/**/*.js'",
