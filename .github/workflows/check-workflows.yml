@@ -26,3 +26,6 @@ jobs:
 
       - name: Ensure SHA pinned actions
         uses: zgosalvez/github-actions-ensure-sha-pinned-actions@af2eb3226618e2494e3d9084f515ad6dcf16e229
+        with:
+          allowlist: |
+            actions/
