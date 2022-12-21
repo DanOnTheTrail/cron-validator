@@ -5,16 +5,16 @@ on:
       - '.github/workflows/**.yml'
 
 jobs:
-  # actionlint:
-  #   runs-on: ubuntu-22.04
-  #   steps:
-  #     - name: Checkout
-  #       uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
+  actionlint:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
 
-  #     - name: Lint workflow files
-  #       uses: docker://rhysd/actionlint:1.6.22
-  #       with:
-  #         args: -color
+      - name: Lint workflow files
+        uses: docker://rhysd/actionlint:1.6.22
+        with:
+          args: -color
 
   checkVersions:
     name: Check Versions
@@ -22,7 +22,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        # uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
 
       - name: Ensure SHA pinned actions
         uses: zgosalvez/github-actions-ensure-sha-pinned-actions@af2eb3226618e2494e3d9084f515ad6dcf16e229
