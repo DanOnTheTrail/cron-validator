@@ -1,6 +1,6 @@
-name: Lint GitHub Actions workflows
+name: Lint GitHub Actions Workflows
 on:
-  pull_request:
+  push:
     paths:
       - './github/workflows/**.yml'
 
