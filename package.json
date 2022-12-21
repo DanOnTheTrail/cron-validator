@@ -30,7 +30,7 @@
     "test": "jest --watch",
     "build": "./scripts/build.sh",
     "start": "npm run build && node ./scripts/server.js",
-    "lint": "npx eslint ./src/**/*.js",
-    "lint:fix": "npx eslint --fix ./src/**/*.js"
+    "lint": "npx eslint './src/**/*.js'",
+    "lint:fix": "npx eslint --fix './src/**/*.js'"
   }
 }
