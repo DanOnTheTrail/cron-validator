@@ -1,1 +1,9 @@
-// Create validator logic
+function validate () {
+
+}
+
+function parse () {
+  return [];
+}
+
+module.exports = { validate, parse };
