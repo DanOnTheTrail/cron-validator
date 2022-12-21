@@ -1,13 +1,3 @@
-function validate (expression) {
-  const parsed = parse(expression);
-
-  if (parsed.length === 0) {
-    return 'INVALID_LENGTH';
-  }
-
-  return 'VALID';
-}
-
 function parse (expression) {
   const result = expression.split(' ');
 
@@ -16,6 +6,16 @@ function parse (expression) {
   }
 
   return result;
+}
+
+function validate (expression) {
+  const parsed = parse(expression);
+
+  if (parsed.length === 0) {
+    return 'INVALID_LENGTH';
+  }
+
+  return 'VALID';
 }
 
 module.exports = { validate, parse };
