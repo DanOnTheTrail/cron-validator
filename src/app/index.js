@@ -1,8 +1,4 @@
 function init(validator) {
-  document
-    .getElementById('validate')
-    .addEventListener("click", validateListener);
-
   function validateListener() {
     const expression = document
       .getElementById('cron')
@@ -26,6 +22,10 @@ function init(validator) {
       .getElementById('message-box')
       .textContent = message;
   }
+
+  document
+    .getElementById('validate')
+    .addEventListener("click", validateListener);
 }
 
 module.exports = { init }

@@ -6,7 +6,7 @@ test('displays success message when input is valid', () => {
     '<input type="text" id="cron" />' +
     '<p id="message-box"></p>';
   document.getElementById('cron').setAttribute("value", "magic");
-  const mockValidator = function () {
+  function mockValidator () {
     return 'VALID';
   }
   sut.init(mockValidator);
@@ -24,7 +24,7 @@ test('displays error message when input is invalid', () => {
     '<input type="text" id="cron" />' +
     '<p id="message-box"></p>';
   document.getElementById('cron').setAttribute("value", "magic");
-  const mockValidator = function () {
+  function mockValidator () {
     return 'INVALID_LENGTH';
   }
   sut.init(mockValidator);
@@ -41,7 +41,7 @@ test('displays unknown error message when status is unknown', () => {
     '<input type="text" id="cron" />' +
     '<p id="message-box"></p>';
   document.getElementById('cron').setAttribute("value", "magic");
-  const mockValidator = function () {
+  function mockValidator () {
     return '';
   }
   sut.init(mockValidator);
