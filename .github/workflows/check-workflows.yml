@@ -2,26 +2,31 @@ name: Lint GitHub Actions Workflows
 on:
   push:
     paths:
-      - './github/workflows/**.yml'
+      - '.github/workflows/**.yml'
 
 jobs:
-  actionlint:
-    runs-on: ubuntu-latest
+  test:
+    runs-on: ubuntu-22.04
     steps:
-      - name: Checkout
-        uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
+      - run: echo "hello world!"
 
-      - name: Lint workflow files
-        uses: docker://rhysd/actionlint:1.6.22
-        with:
-          args: -color
+  # actionlint:
+  #   runs-on: ubuntu-22.04
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
 
-  checkVersions:
-    name: Check Versions
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
+  #     - name: Lint workflow files
+  #       uses: docker://rhysd/actionlint:1.6.22
+  #       with:
+  #         args: -color
 
-      - name: Ensure SHA pinned actions
-        uses: zgosalvez/github-actions-ensure-sha-pinned-actions@af2eb3226618e2494e3d9084f515ad6dcf16e229
+  # checkVersions:
+  #   name: Check Versions
+  #   runs-on: ubuntu-22.04
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
+
+  #     - name: Ensure SHA pinned actions
+  #       uses: zgosalvez/github-actions-ensure-sha-pinned-actions@af2eb3226618e2494e3d9084f515ad6dcf16e229
