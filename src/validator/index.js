@@ -1,12 +1,19 @@
-function validate () {
+function validate (expression) {
+  const parsed = parse(expression);
 
+  if (parsed.length === 0) {
+    return 'INVALID_LENGTH';
+  }
+
+  return 'VALID';
 }
 
 function parse (expression) {
   const result = expression.split(' ');
 
-  if (result.length !== 6)
+  if (result.length !== 6) {
     return [];
+  }
 
   return result;
 }
