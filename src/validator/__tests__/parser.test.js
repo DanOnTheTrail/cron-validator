@@ -1,4 +1,6 @@
-const sut = require('../index').parse;
+import {parse as sut} from '../index';
+
+import.meta.jest.useFakeTimers();
 
 test('parse function exists', () => {
   expect(sut).toBeDefined();

@@ -1,4 +1,6 @@
-const sut = require('../index');
+import sut from '../index';
+
+import.meta.jest.useFakeTimers();
 
 test('displays success message when input is valid', () => {
   document.body.innerHTML =

@@ -1,4 +1,6 @@
-const sut = require('../index').validate;
+import {validate as sut} from '../index';
+
+import.meta.jest.useFakeTimers();
 
 test('validate function exists', () => {
   expect(sut).toBeDefined();

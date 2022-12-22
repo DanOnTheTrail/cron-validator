@@ -28,4 +28,4 @@ function init(validator) {
     .addEventListener("click", validateListener);
 }
 
-module.exports = { init }
+export default { init }

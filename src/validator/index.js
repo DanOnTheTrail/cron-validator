@@ -18,4 +18,4 @@ function validate (expression) {
   return 'VALID';
 }
 
-module.exports = { validate, parse };
+export { validate, parse };

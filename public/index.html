@@ -14,10 +14,11 @@
   <button id="validate">Validate</button>
 
   <div id="message-box"></div>
-  <script src="validator.js"></script>
-  <script src="app.js"></script>
-  <script>
-    init(validate)
+
+  <script type="module">
+    import app from './app.js';
+    import { validate } from './validator.js';
+    app.init(validate)
   </script>
 </body>
 
