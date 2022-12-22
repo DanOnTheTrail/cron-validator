@@ -9,13 +9,17 @@
 </head>
 
 <body>
-  <form>
-    <label for="cron">Cron Expression</label>
-    <input type="text" id="cron" />
-    <button id="validate">Validate</button>
-  </form>
-  <script src="validator.js"></script>
-  <script src="app.js"></script>
+  <label for="cron">Cron Expression</label>
+  <input type="text" id="cron" />
+  <button id="validate">Validate</button>
+
+  <div id="message-box"></div>
+
+  <script type="module">
+    import app from './app.js';
+    import { validate } from './validator.js';
+    app.init(validate)
+  </script>
 </body>
 
 </html>

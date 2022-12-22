@@ -2,6 +2,7 @@
   "name": "cron-validator",
   "version": "0.1.0",
   "description": "Validate cron strings",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DanOnTheTrail/cron-validator.git"
@@ -27,10 +28,11 @@
     "prettier": "^2.8.1"
   },
   "scripts": {
-    "test": "jest",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --watch",
+    "test:ci": "NODE_OPTIONS=--experimental-vm-modules npx jest --coverage",
     "build": "./scripts/build.sh",
-    "start": "npm run build && node ./scripts/server.js",
-    "lint": "npx eslint ./src/**/*.js",
-    "lint:fix": "npx eslint --fix ./src/**/*.js"
+    "start": "npm run build && node ./scripts/server.cjs",
+    "lint": "npx eslint './src/**/*.js'",
+    "lint:fix": "npx eslint --fix './src/**/*.js'"
   }
 }
